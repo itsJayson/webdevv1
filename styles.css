@@ -1,0 +1,90 @@
+.logo{
+    font-size: 2rem;
+}
+.feature-icon-small{
+    width: fit-content;
+    padding: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.modal-content{
+    width: 60rem;
+}
+.modal-dialog{
+    margin-left: 500px;
+}
+.modalCaption{
+    font-size: 1rem;
+}
+.dateForm{
+    padding: .5rem;
+    border-radius: 8px;
+  
+}
+.featurette-image{
+    border-radius: 8px;
+}
+
+#thank-you-message {
+    display: none;
+  }
+  
+  #thank-you-message.show {
+    display: block;
+  }
+
+  .liveAlertPlaceholder{
+   
+    z-index: 99999;
+  }
+@media only screen and (min-width: 1921px)  {
+    .modal-dialog{
+        margin-left: 50rem;
+    }
+}
+@media only screen and (max-width: 1600px)  {
+    .modal-dialog{
+        margin-left: 20rem;
+    }
+}
+
+@media only screen and (max-width: 1024px)  {
+    .modal-dialog{
+        margin-left: 1.5rem;
+    }
+}
+@media only screen and (max-width: 768px)  {
+    .modal-content{
+        width: 40rem;
+    }
+    .modal-dialog{
+        margin-left: 3.5rem;
+    }
+}
+
+@media only screen and (max-width: 425px)  {
+    .modal-content{
+        width: 20rem;
+    }
+    .modal-dialog{
+        margin-left: 3.5rem;
+    }
+}
+
+@media only screen and (max-width: 375px)  {
+    .modal-content{
+        width: 20rem;
+    }
+    .modal-dialog{
+        margin-left: 2rem;
+    }
+}
+
+@media only screen and (max-width: 320px)  {
+    .modal-content{
+        width: 15rem;
+    }
+    .modal-dialog{
+        margin-left: 2rem;
+    }
+}

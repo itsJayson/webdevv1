@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reppin 706</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="shortcut icon" href="images/postcard.svg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+    
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><i class="bi bi-postcard logo"></i></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="#featuresCont">Features</a>
+            <a class="nav-link" href="#reviews">Reviews</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img
+            src="./images/frontimg.jpg"
+            class="d-block mx-lg-auto img-fluid rounded"
+            alt="Bootstrap Themes"
+            width="700"
+            height="500"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+            Legacy Letters
+          </h1>
+          <p class="lead">
+            Our innovative platform allows you to craft meaningful emails today,
+            with the assurance they will reach your loved ones when the moment
+            is right—creating an everlasting connection.
+          </p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn btn-primary btn-lg px-4 me-md-2 createEmail"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+            >
+              Create a Message
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--features-->
+    <div class="container px-4 py-5" id="featuresCont">
+      <h2 class="pb-2 border-bottom">Benefits of using our Services</h2>
+
+      <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+        <div class="col d-flex flex-column align-items-start gap-2">
+          <h2 class="fw-bold text-body-emphasis">
+            Your Words, Forever Delivered
+          </h2>
+          <p class="text-body-secondary">
+            Let your thoughts reach loved ones even beyond the horizon—because
+            some messages are too important to fade away.
+          </p>
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary btn-lg px-4 me-md-2 createEmail"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+           
+          >
+            Create a Message
+          </button>
+        </div>
+
+        <div class="col">
+          <div class="row row-cols-1 row-cols-sm-2 g-4">
+            <div class="col d-flex flex-column gap-2">
+              <div
+                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
+              >
+                <i class="bi bi-envelope-plus" width="1em" height="1em"></i>
+              </div>
+              <h4 class="fw-semibold mb-0 text-body-emphasis">
+                Automated Email Scheduling
+              </h4>
+              <p class="text-body-secondary">
+                Users can set a specific date and time for their email to be
+                sent, ensuring timely delivery to recipients.
+              </p>
+            </div>
+
+            <div class="col d-flex flex-column gap-2">
+              <div
+                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
+              >
+                <i class="bi bi-chat-left-text" width="1em" height="1em"></i>
+              </div>
+              <h4 class="fw-semibold mb-0 text-body-emphasis">
+                Personalized Messages
+              </h4>
+              <p class="text-body-secondary">
+                The ability to customize emails with personalized content,
+                making them heartfelt and unique.
+              </p>
+            </div>
+
+            <div class="col d-flex flex-column gap-2">
+              <div
+                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
+              >
+                <i class="bi bi-person-vcard" width="1em" height="1em"></i>
+              </div>
+              <h4 class="fw-semibold mb-0 text-body-emphasis">
+                User-Friendly Interface
+              </h4>
+              <p class="text-body-secondary">
+                An intuitive design that simplifies the process of composing and
+                scheduling emails, catering to users of all tech levels
+              </p>
+            </div>
+
+            <div class="col d-flex flex-column gap-2">
+              <div
+                class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
+              >
+                <i class="bi bi-shield-lock" width="1em" height="1em"></i>
+              </div>
+              <h4 class="fw-semibold mb-0 text-body-emphasis">
+                Security and Privacy
+              </h4>
+              <p class="text-body-secondary">
+                Robust encryption and data protection measures to ensure the
+                privacy of users' information and the confidentiality of their
+                messages.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Modal title
+            </h1> -->
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <main>
+                <div class="py-5 text-center">
+                  <img
+                    class="d-block mx-auto mb-4"
+                    src="./images/postcard.svg"
+                    alt=""
+                    width="72"
+                    height="57"
+                  />
+                  <h2>Fillup form</h2>
+                  <p class="lead modalCaption">
+                    Please fill in the details below to design your personalized
+                    email for friends and family. Remember to share your
+                    thoughts, feelings, and any special memories you wish to
+                    convey.
+                  </p>
+                </div>
+
+                <div class="row g-5">
+                  <div class="col-12">
+                    <h4 class="mb-3">Create Your Lasting Message!</h4>
+                  
+                      <div class="row g-3">
+                        <div class="col-sm-6">
+                          <label for="firstName" class="form-label"
+                            >First name</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="firstName"
+                            placeholder=""
+                            value=""
+                            required=""
+                          />
+                          <div class="invalid-feedback">
+                            First name is required.
+                          </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <label for="lastName" class="form-label"
+                            >Last name</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="lastName"
+                            placeholder=""
+                            value=""
+                            required=""
+                          />
+                          <div class="invalid-feedback">
+                            Last name is required.
+                          </div>
+                        </div>
+
+                        <div class="col-12">
+                          <label for="email" class="form-label">Email </label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            placeholder="you@example.com"
+                            required
+                          />
+                          <div class="invalid-feedback">
+                            Please enter a valid email address
+                          </div>
+                        </div>
+
+                        <div class="col-12">
+                          <label for="message" class="form-label"
+                            >Message</label
+                          >
+                          <textarea
+                            id="message"
+                            class="form-control"
+                            type="text"
+                            name="subject"
+                            placeholder="Write something.."
+                            required=""
+                            style="height: 200px"
+                            value = ""
+                          ></textarea>
+
+                          <div class="invalid-feedback">
+                            Please enter your shipping address.
+                          </div>
+                        </div>
+
+                        <div class="col-md-5">
+                          <label for="country" class="form-label"
+                            >Deliver in
+                            <span class="text-body-secondary"
+                            >(Note: Choose Date)</span</label
+                          >
+                          <input
+                            type="date"
+                            id="date"
+                            name="date"
+                            required=""
+                            class="dateForm"
+                          />
+                          <div class="invalid-feedback">
+                            Please select a valid date.
+                          </div>
+                        </div>
+                      </div>
+
+                      <hr class="my-4" />
+
+                      <div class="col-12">
+                        <label for="email" class="form-label"
+                          >Email Recipient
+                          <span class="text-body-secondary"
+                            >(Note:This email will receive the future
+                            email)</span
+                          >
+                        </label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="emailRecipient"
+                          placeholder="you@example.com"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please enter a valid email address
+                        </div>
+                      </div>
+
+                      <div class="form-check">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="save-info"
+                        />
+                        <label class="form-check-label" for="save-info"
+                          >Save this information for next time</label
+                        >
+                      </div>
+
+                      <hr class="my-4" />
+
+                      <button
+                        class="w-100 btn btn-primary btn-lg"
+                        type="submit"
+                        id="sendBtn"
+                      >
+                        Send to the future
+                      </button>
+
+                      <input
+                        class="w-100 btn btn-primary btn-lg mt-2"
+                        type="button"
+                        value="Generate PDF message"
+                        onclick="generatePDF()"
+                      >
+                     
+                
+                  </div>
+                </div>
+              </main>
+
+              <footer
+                class="my-5 pt-5 text-body-secondary text-center text-small"
+              >
+                <p class="mb-1">© 2024–2024 Legacy Letters</p>
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <a class="nav-link disabled" aria-disabled="true"
+                      >Privacy</a
+                    >
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="nav-link disabled" aria-disabled="true">Terms</a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="nav-link disabled" aria-disabled="true"
+                      >Support</a
+                    >
+                  </li>
+                </ul>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--reviews-->
+    <div class="container marketing" id="reviews">
+      <div class="row">
+        <div class="col-lg-4">
+        <img   class="bd-placeholder-img rounded-circle"
+          width="140"
+          height="140"
+          xmlns="http://www.w3.org/2000/svg"
+          role="img"
+          aria-label="Placeholder"
+          preserveAspectRatio="xMidYMid slice"
+          focusable="false" src="./images/person1.jpg" alt="male person portrait">
+            <title>Placeholder</title>
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-color)"
+            ></rect>
+          </svg>
+          <h2 class="fw-normal">John Doe</h2>
+          <p>
+            This service gave me peace of mind. I can express my love for my family in my own words, even when I’m not here.
+          </p>
+          <p><a class="btn btn-secondary" href="#person1">View details »</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img   class="bd-placeholder-img rounded-circle"
+            width="140"
+            height="140"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="Placeholder"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false" src="./images/person2.jpg" alt="female person portrait">
+            <title>Placeholder</title>
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-color)"
+            ></rect>
+          </svg>
+          <h2 class="fw-normal">Angela Bitbit</h2>
+          <p>
+            I never thought about leaving a message for my loved ones until now. It’s a beautiful way to connect beyond the grave.
+          </p>
+          <p><a class="btn btn-secondary" href="#person2">View details »</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img   class="bd-placeholder-img rounded-circle"
+            width="140"
+            height="140"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="Placeholder"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false" src="./images/person3.jpg" alt="male person portrait">
+            <title>Placeholder</title>
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-color)"
+            ></rect>
+          </svg>
+          <h2 class="fw-normal">Rei Duterte</h2>
+          <p>
+            Legacy Letter is a unique concept that truly touches the heart. I filled mine out and felt an incredible sense of relief.
+          </p>
+          <p><a class="btn btn-secondary" href="#person3">View details »</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+      </div>
+      <!-- /.row -->
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider" />
+
+      <div class="row featurette">
+        <div class="col-md-7" id="person1">
+          <h2 class="featurette-heading fw-normal lh-1">
+            Legacy Letters allowed me to leave a piece of my heart for my family, and I cherish that.
+            <span class="text-body-secondary">- John Doe</span>
+          </h2>
+          <p class="lead mt-3">
+            Legacy Letters has truly touched my heart. The ability to leave a piece of my love and thoughts for my family gives me comfort and assurance. Knowing that they will receive my heartfelt words in times when they need it most makes this service invaluable to me. It has transformed my perspective on leaving a legacy, and I can’t express how grateful I am for this opportunity.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+          width="500"
+          height="500"
+          role="img"
+          aria-label="Placeholder: 500x500"
+          preserveAspectRatio="xMidYMid slice"
+          focusable="false" src="./images/person1.jpg" alt="male person image">
+            <title>Placeholder</title>
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-bg)"
+            ></rect>
+      
+          </svg>
+        </div>
+      </div>
+
+      <hr class="featurette-divider" />
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2" id="person2">
+          <h2 class="featurette-heading fw-normal lh-1">
+            The thought of my loved ones receiving my words makes me feel more connected to them, even in the future.
+            <span class="text-body-secondary">- Angela Bitbit</span>
+          </h2>
+          <p class="lead mt-3">
+            I was initially skeptical about the idea, but Eternal Messages changed my perspective completely. The thought of my loved ones receiving my thoughts and wishes after I’m gone brings me an unexpected sense of connection and peace. It allows me to leave behind not just memories but heartfelt messages that can guide and comfort them in tough times. This service is a remarkable way to ensure that our bonds remain strong, regardless of time.
+          </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+            width="500"
+            height="500"
+            role="img"
+            aria-label="Placeholder: 500x500"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false" src="./images/person2.jpg" alt="female person image">
+            <title>Placeholder</title>
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-bg)"
+            ></rect>
+          
+          </svg>
+        </div>
+      </div>
+
+      <hr class="featurette-divider" />
+
+      <div class="row featurette">
+        <div class="col-md-7" id="person3">
+          <h2 class="featurette-heading fw-normal lh-1">
+            This service beautifully redefines how we express love and legacy; it brought tears to my eyes.
+            <span class="text-body-secondary">- Rei Duterte</span>
+          </h2>
+          <p class="lead mt-3">
+            Eternal Messages is an incredibly special service that redefines how we think about love and legacy. Filling out my messages brought tears to my eyes as I reflected on the importance of those connections. It’s comforting to know that my family can read my words when they are feeling lost or in need of guidance. This thoughtful approach to expressing our feelings makes it a beautifully profound experience that I would recommend to anyone looking to leave a meaningful impact.
+          </p>
+        </div>
+        <div class="col-md-5">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+            width="500"
+            height="500"
+            role="img"
+            aria-label="Placeholder: 500x500"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false" src="./images/person3.jpg" alt="male person image">
+            <title>Placeholder</title>
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-bg)"
+            ></rect>
+        
+          </svg>
+        </div>
+      </div>
+
+      <hr class="featurette-divider" />
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+
+    <script>
+        document.querySelector("#sendBtn").onclick = function () {
+
+         swal("Succesfully Submitted!", "your recipient will remember you.", "success", {
+      button: "Go to Home",
+    });
+       
+        }
+  
+       
+        </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  
+
+  </body>
+  <script>
+    function generatePDF() {
+        
+        const { jsPDF } = window.jspdf;
+        
+        const doc = new jsPDF();
+        const currentDate = new Date();
+        const formattedDate = currentDate.toLocaleDateString();
+  
+  
+        let startX = 10;
+        let startY= 10;
+        let lineheight = 10;
+  
+        var content = doc.splitTextToSize(document.getElementById("message").value, 200);
+        var email = doc.splitTextToSize(document.getElementById("email").value, 200);
+        var emailrecipient = doc.splitTextToSize(document.getElementById("emailRecipient").value, 200);
+        var fname = doc.splitTextToSize(document.getElementById("firstName").value, 200);
+        var lname = doc.splitTextToSize(document.getElementById("lastName").value, 200);
+  
+  
+        doc.text("A Message to you", 90, 10);
+  
+        startY += lineheight;
+  
+        doc.text("Date: " + formattedDate, 150, 60);
+
+        startY += lineheight;
+        doc.text("From: " + fname + " " + lname, startX, startY);
+
+        startY += lineheight;
+        doc.text("To: " + emailrecipient, startX, startY);
+
+        startY += lineheight;
+        doc.text("Sender: " +email, startX, startY);
+
+        startY += lineheight;
+        startY += lineheight;
+        doc.text(content, startX, startY);
+
+        
+        doc.save("Memories.pdf");
+    }            
+  </script> 
+  
+</html>
+
