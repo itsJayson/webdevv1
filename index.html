@@ -592,23 +592,25 @@
         const doc = new jsPDF();
         const currentDate = new Date();
         const formattedDate = currentDate.toLocaleDateString();
-  
-  
+       
         let startX = 10;
         let startY= 10;
         let lineheight = 10;
   
-        var content = doc.splitTextToSize(document.getElementById("message").value, 200);
+        var content = doc.splitTextToSize(document.getElementById("message").value, 150);
         var email = doc.splitTextToSize(document.getElementById("email").value, 200);
         var emailrecipient = doc.splitTextToSize(document.getElementById("emailRecipient").value, 200);
         var fname = doc.splitTextToSize(document.getElementById("firstName").value, 200);
         var lname = doc.splitTextToSize(document.getElementById("lastName").value, 200);
-  
-  
-        doc.text("A Message to you", 90, 10);
+        
+    
+       
+        doc.setFont("courier");
+        doc.setFontSize(22);
+        doc.text("A Message to you", 70, 10);
   
         startY += lineheight;
-  
+        doc.setFontSize(15);
         doc.text("Date: " + formattedDate, 150, 60);
 
         startY += lineheight;
@@ -619,7 +621,7 @@
 
         startY += lineheight;
         doc.text("Sender: " +email, startX, startY);
-
+        
         startY += lineheight;
         startY += lineheight;
         doc.text(content, startX, startY);
